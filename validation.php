@@ -3,7 +3,8 @@
   function validation($request) {
     // $POST連想配列
     $errors = [];
-
+    // 以下はバリデーション（名前、メールアドレス、ホームページ、性別、年齢、お問い合わせ内容、チェック事項の順に）
+    // if文を使って、エラーを表示するために。    
     if(empty($request['your_name']) || 20 < mb_strlen($request['your_name'])) {
       $errors[] = '「氏名」は必須です。20文字以内で入力して下さい。';
     }
